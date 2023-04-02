@@ -1,0 +1,35 @@
+.contain{
+    border-radius: 15px;
+   
+    backdrop-filter: blur(12px);
+    background-color: rgba(158, 174, 179, 0.163);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 0px rgba(255, 255, 255, 0.4) solid;
+    border-bottom: 0px rgba(40, 40, 40, 0.35) solid;
+    border-right: 0px rgba(40, 40, 40, 0.35) solid;
+    /* width:clamp(50%,700px,90%); */
+
+
+}
+
+#signup{
+    color: black;
+
+    border-radius: 15px;
+    border: none;
+    background: #8a5daa;
+    background: -webkit-linear-gradient(127deg, #8a5daa 0%, #fc2731 100%);
+    background: linear-gradient(127deg, #8a5daa 0%, #fc2731 100%);
+    border-bottom: 0px rgba(40, 40, 40, 0.35) solid;
+    border-right: 0px rgba(40, 40, 40, 0.35) solid;
+}
+
+
+#file{
+    background: #8a5daa;
+    background: -webkit-linear-gradient(127deg, #8a5daa 0%, #fc2731 100%);
+    background: linear-gradient(127deg, #8a5daa 0%, #fc2731 100%);
+    border-bottom: 0px rgba(40, 40, 40, 0.35) solid;
+    border-right: 0px rgba(40, 40, 40, 0.35) solid;
+}
+

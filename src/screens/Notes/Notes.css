@@ -1,0 +1,13 @@
+#card{
+    border-radius: 10px;
+    background: rgba(146,146,146,0.1);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    border: 1px solid rgba(146,146,146,0.05);
+}
+
+#chip{
+    background: rgba(146,146,146,0.1);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+}
