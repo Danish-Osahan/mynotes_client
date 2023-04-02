@@ -19,10 +19,9 @@ export const login = (email, password) => async (dispatch) => {
     const config = {
       headers: { "Content-type": "application/json" },
     };
-    // setLoading(true);
 
     const { data } = await axios.post(
-      `${baseUrl}/api/users/login`,
+      `${baseUrl}api/users/login`,
       // "http://localhost:5000/api/users/login",
       { email, password },
       config
@@ -57,7 +56,7 @@ export const register=(name,email,password,pic)=>async (dispatch) =>{
 
     const { data } = await axios.post(
       // "http://localhost:5000/api/users",
-      `${baseUrl}/api/users/login`,
+      `${baseUrl}api/users/login`,
       { name, email, password, pic },
       config
     );
@@ -92,7 +91,7 @@ export const updateProfile = (user) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.post("/api/users/profile", user, config);
+    const { data } = await axios.post(`${baseUrl}api/users/profile`, user, config);
 
     dispatch({ type: User_Update_Success, payload: data });
 
