@@ -10,6 +10,7 @@ import {
   User_Login_Request
 } from "../constants/userConstants";
 import axios from "axios";
+const baseUrl ='https://mynotes-api-ozqd.onrender.com/'
 
 export const login = (email, password) => async (dispatch) => {
   try {
@@ -21,7 +22,8 @@ export const login = (email, password) => async (dispatch) => {
     // setLoading(true);
 
     const { data } = await axios.post(
-      "http://localhost:5000/api/users/login",
+      `${baseUrl}/api/users/login`,
+      // "http://localhost:5000/api/users/login",
       { email, password },
       config
     );
@@ -54,7 +56,8 @@ export const register=(name,email,password,pic)=>async (dispatch) =>{
     };
 
     const { data } = await axios.post(
-      "http://localhost:5000/api/users",
+      // "http://localhost:5000/api/users",
+      `${baseUrl}/api/users/login`,
       { name, email, password, pic },
       config
     );
