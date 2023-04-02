@@ -12,6 +12,7 @@ import {
   Note_Delete_Request,
   Note_Delete_Success,
 } from "../constants/notesConstants";
+const baseUrl ='https://mynotes-api-ozqd.onrender.com/'
 
 import axios from "axios";
 
@@ -31,7 +32,7 @@ export const listNotes = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`/api/notes`, config);
+    const { data } = await axios.get(`${baseUrl}/api/notes`, config);
 
     dispatch({
       type: Note_List_Success,
@@ -68,7 +69,7 @@ export const createNote =
       };
 
       const { data } = await axios.post(
-        `/api/notes/create`,
+        `${baseUrl}/api/notes/create`,
         { title, content, category, picture },
         config
       );
@@ -108,7 +109,7 @@ export const updateNoteAction =
       };
 
       const { data } = await axios.put(
-        `/api/notes/${id}`,
+        `${baseUrl}/api/notes/${id}`,
         { title, content, category, picture },
         config
       );
@@ -146,7 +147,7 @@ export const deleteNoteAction = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.delete(`/api/notes/${id}`, config);
+    const { data } = await axios.delete(`${baseUrl}/api/notes/${id}`, config);
 
     dispatch({
       type: Note_Delete_Success,
